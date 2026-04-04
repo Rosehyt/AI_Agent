@@ -1,0 +1,55 @@
+
+==================================================
+📄 ASSIGNMENT 3 EVALUATION REPORT
+⏰ Time: 2026-04-04 08:53:56
+🤖 Agent Mode: GRAPH
+🧠 Embedding Model: [ADVANCED] BAAI/bge-base-en-v1.5
+==================================================
+
+🚀 STARTING AI-POWERED EVALUATION...
+==================================================
+
+Running: Test A: Apple Revenue...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: Apple 的總營收 (Total net sales) 在 2024 年是 $391,035 百萬美元 [Source: Apple 10-K]。
+✅ PASS (16.92s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test B: Tesla R&D...
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What were Tesla's Research and Development (R&D) expenses for the fiscal year 2024?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: I am sorry, but this document does not contain the answer to this question.
+❌ FAIL (32.07s)
+   Agent Answer: I am sorry, but this document does not contain the answer to this question.
+   Judge Verdict: FAIL
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test D: Apple Services Cost...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What was Apple's Cost of Sales - Services for fiscal year 2024?
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What was Apple's Cost of Revenue for Services for fiscal year 2024?
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---

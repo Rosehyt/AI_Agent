@@ -1,0 +1,272 @@
+
+==================================================
+📄 ASSIGNMENT 3 EVALUATION REPORT
+⏰ Time: 2026-04-04 07:10:35
+🤖 Agent Mode: GRAPH
+🧠 Embedding Model: [BASELINE] sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+==================================================
+
+🚀 STARTING AI-POWERED EVALUATION...
+==================================================
+
+Running: Test A: Apple Revenue...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: Apple 的總營收 (Total net sales) 在 2024 年是 391,035 百萬美元 [Source: Apple 10-K]。
+✅ PASS (17.18s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test B: Tesla R&D...
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What were Tesla's Research and Development (R&D) expenses for the fiscal year 2024?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What were Tesla's consolidated Research and Development expenses, as reported on their Form 10-K, for the fiscal year ending December 31, 2024?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+   (Max retries reached, generating anyway...)
+--- ✍️ GENERATING ---
+A: I am sorry, but I cannot answer that question. While the provided document is Tesla's 10-K form, it does not contain information about Tesla's consolidated Research and Development expenses.
+❌ FAIL (44.69s)
+   Agent Answer: I am sorry, but I cannot answer that question. While the provided document is Tesla's 10-K form, it does not contain information about Tesla's consolidated Research and Development expenses.
+   Judge Verdict: FAIL
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test D: Apple Services Cost...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: Apple 的「服務成本 (Cost of sales - Services)」在 2024 年是：
+*   **三個月期間：** 6,485 百萬美元 [Source: Apple 10-K]
+*   **十二個月期間：** 25,119 百萬美元 [Source: Apple 10-K]
+✅ PASS (15.63s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test E: Tesla Energy Revenue...
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What was Tesla's revenue for its Energy Generation and Storage segment in fiscal year 2024?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What was Tesla's revenue for its Energy Generation and Storage business segment for the fiscal year ending December 31, 2024?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+   (Max retries reached, generating anyway...)
+--- ✍️ GENERATING ---
+A: I am sorry, but this document does not contain the revenue for Tesla's Energy Generation and Storage business segment for the fiscal year ending December 31, 2024.
+❌ FAIL (45.29s)
+   Agent Answer: I am sorry, but this document does not contain the revenue for Tesla's Energy Generation and Storage business segment for the fiscal year ending December 31, 2024.
+   Judge Verdict: FAIL
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test G: Unknown Info...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What is the projected MSRP for the base model iPhone 17, anticipated for release in 2025, and what are the expected component costs and gross margin targets influencing this pricing decision?
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What is the projected Manufacturer's Suggested Retail Price (MSRP) for the base model iPhone 17, anticipated for release in 2025, and what are the expected Bill of Materials (BOM) costs, Research and Development (R&D) expenses allocated to this model, and target gross profit margin influencing this pricing decision?
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+   (Max retries reached, generating anyway...)
+--- ✍️ GENERATING ---
+A: I'm sorry, but I cannot provide the projected Manufacturer's Suggested Retail Price (MSRP) for the base model iPhone 17, anticipated for release in 2025, or the expected Bill of Materials (BOM) costs, Research and Development (R&D) expenses allocated to this model, and target gross profit margin inf...
+✅ PASS (45.10s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test A1 [Eng]: Apple Revenue...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: Apple's Total Net Sales for the fiscal year 2024 was $391,035 million [Source: Apple 10-K].
+✅ PASS (15.44s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test A2 [Eng]: Tesla Automotive Revenue...
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What was the total automotive revenue recognized by Tesla, Inc. for the fiscal year 2024?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What was the total automotive revenue recognized by Tesla, Inc. for the fiscal year ending December 31, 2024, as reported under US GAAP?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+   (Max retries reached, generating anyway...)
+--- ✍️ GENERATING ---
+A: I am sorry, but I cannot answer the question about the total automotive revenue recognized by Tesla, Inc. for the fiscal year ending December 31, 2024. The provided text focuses on tax credits, regulatory credits, and general company information, but it does not include specific financial figures fo...
+❌ FAIL (45.13s)
+   Agent Answer: I am sorry, but I cannot answer the question about the total automotive revenue recognized by Tesla, Inc. for the fiscal year ending December 31, 2024. The provided text focuses on tax credits, regulatory credits, and general company information, but it does not include specific financial figures fo...
+   Judge Verdict: FAIL
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test B1 [Mixed]: Apple R&D...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: Apple 的 2024 年研發費用為 313.7 億美元 [來源：Apple 10-K]。
+✅ PASS (14.95s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test B2 [Mixed]: Tesla CapEx...
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What were Tesla's capital expenditures for the fiscal year 2024, broken down by major asset category (e.g., property, plant, and equipment; software development)?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: What were Tesla's capital expenditures for the fiscal year 2024, disaggregated by major asset class, including but not limited to: property, plant, and equipment; capitalized software development costs; and investments in energy generation and storage assets?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+   (Max retries reached, generating anyway...)
+--- ✍️ GENERATING ---
+A: I am sorry, but I cannot answer the question about Tesla's capital expenditures for the fiscal year 2024. The provided text does not contain the specific figures for capital expenditures or a breakdown by asset class.
+❌ FAIL (45.24s)
+   Agent Answer: I am sorry, but I cannot answer the question about Tesla's capital expenditures for the fiscal year 2024. The provided text does not contain the specific figures for capital expenditures or a breakdown by asset class.
+   Judge Verdict: FAIL
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test C1 [Eng]: R&D Comparison...
+--- 🔍 RETRIEVING ---
+   Routed to: both
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: Apple's Research and Development expenses for the year ended September 28, 2024, were $31,370 million [Source: Apple 10-K].
+
+I don't have the data about Tesla's R&D expenses in 2024 from the provided context.
+
+Therefore, I cannot answer which company spent more on R&D in 2024.
+❌ FAIL (16.89s)
+   Agent Answer: Apple's Research and Development expenses for the year ended September 28, 2024, were $31,370 million [Source: Apple 10-K].
+
+I don't have the data about Tesla's R&D expenses in 2024 from the provided context.
+
+Therefore, I cannot answer which company spent more on R&D in 2024.
+   Judge Verdict: FAIL
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test C2 [Eng]: Gross Margin Analysis...
+--- 🔍 RETRIEVING ---
+   Routed to: both
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: Apple's total gross margin percentage for 2024 is calculated as follows:
+
+*   Gross Margin: $180,683 million [Source: Apple 10-K]
+*   Total Net Sales: $391,035 million [Source: Apple 10-K]
+*   Gross Margin Percentage: ($180,683 / $391,035) * 100 = 46.21%
+
+I am unable to calculate Tesla's total gross...
+✅ PASS (16.86s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test D1 [Eng]: Apple Services Cost...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: yes (Raw: yes)
+--- ✍️ GENERATING ---
+A: Apple's Cost of sales for Services in 2024 was $6,485 million for the three months ended September 28, 2024, and $25,119 million for the twelve months ended September 28, 2024 [Source: Apple 10-K].
+✅ PASS (15.77s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test E1 [Mixed]: 2025 Projection (Trap)...
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: Does Apple's most recent annual report or investor presentations explicitly disclose a projected unit sales target for iPhones in fiscal year 2025?
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: Does Apple's most recent Form 10-K filing or investor presentations explicitly disclose forward-looking guidance regarding iPhone unit sales volume or revenue projections for fiscal year 2025?
+--- 🔍 RETRIEVING ---
+   Routed to: apple
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+   (Max retries reached, generating anyway...)
+--- ✍️ GENERATING ---
+A: I'm sorry, but I cannot answer that question. The provided text from Apple's 10-K does not contain any forward-looking guidance regarding iPhone unit sales volume or revenue projections for fiscal year 2025.
+✅ PASS (47.89s)
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+Running: Test F1 [Eng]: CEO Identity...
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: Who signed the most recent Form 10-K report as the Principal Executive Officer for Tesla, Inc.?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+--- 🔄 REWRITING QUERY ---
+   New Question: Who signed the most recent Form 10-K as the Chief Executive Officer for Tesla, Inc.?
+--- 🔍 RETRIEVING ---
+   Routed to: tesla
+--- ⚖️ GRADING ---
+   Relevance Grade: no (Raw: no)
+   (Max retries reached, generating anyway...)
+--- ✍️ GENERATING ---
+A: I am unable to answer this question. The provided text does not contain the signature of the Chief Executive Officer.
+❌ FAIL (44.20s)
+   Agent Answer: I am unable to answer this question. The provided text does not contain the signature of the Chief Executive Officer.
+   Judge Verdict: FAIL
+--------------------------------------------------
+⏳ Waiting 10 seconds to avoid Gemini API Rate Limit...
+
+📊 FINAL SCORE: 8/14
