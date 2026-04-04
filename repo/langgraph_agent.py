@@ -146,9 +146,9 @@ def generate_node(state: AgentState):
     # You can modify prompt, write the prompt LLM can generate the final answer based on the retrieved documents
     prompt = ChatPromptTemplate.from_messages([
         ("system", "You are an expert financial analyst. Use the provided context to answer the question. \n"
-                   "CRITICAL INSTRUCTIONS:\n"
-                   "1. If the context doesn't contain the answer (even after retries), you must honestly state 'I don't know' instead of hallucinating.\n"
-                   "2. You MUST strictly cite sources for your claims using the exact format: [Source: Apple 10-K] or [Source: Tesla 10-K].\n\nContext:\n{context}"),
+                    "1. English Only: Your Final Answer MUST be in English, regardless of the language of the user's question.\n"
+                    "2. If the context doesn't contain the answer (even after retries), you must honestly state 'I don't know' instead of hallucinating.\n"
+                    "3. You MUST strictly cite sources for your claims using the exact format: [Source: Apple 10-K] or [Source: Tesla 10-K].\n\nContext:\n{context}"),
         ("human", "{question}"),
     ])
     

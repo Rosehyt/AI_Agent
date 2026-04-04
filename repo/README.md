@@ -1,4 +1,4 @@
-**You can edit functions in `graph_agent.py`, and in evaluator.py can change test_mode (LEGACY is langchain mode, GRAPH is langgraph)**  
+**You can edit functions in `langgraph_agent.py`, and in evaluator.py can change test_mode (LEGACY is langchain mode, GRAPH is langgraph)**  
 
 # 🛠️ Prerequisites
 Before you begin, ensure you have the following installed:
