@@ -1,4 +1,11 @@
 # Assignment 3: Autonomous Multi-Doc Financial Analyst Report
+**Course:** AI Agent Development  
+**Student:** Rosehyt  
+**TA Name:** 簡資烜 Leon  
+**Due Date:** 2026/04/09  
+**GitHub URL:** [Assignment3 Branch](https://github.com/Rosehyt/AI_Agent/tree/Assignment3)
+
+---
 
 ---
 
@@ -93,3 +100,27 @@ Action Input: "who signed the 10-K report"
 
 **總結：**
 `chunk_size=2000` 是一個在「避免切斷表頭上下文」與「維持合理的 Token 花費」之間取得平衡的設定點。但在面對高度格式化的財報時，最佳解或許不是單純調整字數，而是引入針對表格優化的解析器或階層式切割 (Hierarchical Chunking)。
+
+---
+
+## 4. 核心功能規格檢查 (Requirements Compliance Checklist)
+
+本專案已嚴格遵循作業規範中的三類要求：
+
+### ✅ A. 技術與結構要求 (Legacy Agent)
+- **Mandatory Variables**: 完整使用 `{tools}`, `{tool_names}`, `{input}`, `{agent_scratchpad}`。
+- **ReAct Loop**: 嚴格執行 `Question -> Thought -> Action -> Action Input -> Observation -> Final Answer` 迴圈格式。
+
+### ✅ B. 行為約束要求 (Quality Control)
+- **English Only**: 所有「Final Answer」均強制為英文，即便提問使用中文。
+- **Year Precision**: 在 Prompt 中明確警告 Agent 必須精確區分 2024、2023、2022 年數據。
+- **Honesty**: 實作「誠實回覆」機制，遇到未知數據或陷阱題（如 2025 年預測）時統一回答 `I don't know` 代替幻覺。
+
+### ✅ C. LangGraph 邏輯節點
+- **Intelligent Router**: 透過 LLM 解析 JSON 自動從 `["apple", "tesla", "both", "none"]` 中選擇檢索來源。
+- **Relevance Grader**: 實作二進位判斷 (`yes`/`no`) 自動決定是否需要重新組織問題。
+- **Query Rewriter**: 遇到檢索失敗時，具備將「隨意提問」優化為「專業財務術語」的糾錯重寫能力。
+- **Final Generator**: 嚴格遵守文件引用格式 (e.g., `[Source: Apple 10-K]`)。
+
+---
+*End of Report*
