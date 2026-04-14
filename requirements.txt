@@ -1,0 +1,18 @@
+# PDF & Data Processing
+pdfplumber
+
+# Graph Database
+neo4j
+
+# LLM Framework (Local Inference)
+langchain
+langchain-core
+langchain-huggingface
+transformers
+torch
+accelerate
+sentence-transformers
+bitsandbytes
+
+# Environment
+python-dotenv
