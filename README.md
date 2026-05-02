@@ -72,4 +72,4 @@ System Performance Subtotal: 60.00 / 60
 ## 7. Knowledge Graph Visualization
 Below is a visualization of the Knowledge Graph hosted on Neo4j Aura Cloud, showing the relationships between Articles and Rules.
 
-![Knowledge Graph Visualization](file:///f:/AI_Agent/Assignment-5/螢幕擷取畫面%202026-05-02%20192841.png)
+![Knowledge Graph Visualization](螢幕擷取畫面%202026-05-02%20192841.png)
