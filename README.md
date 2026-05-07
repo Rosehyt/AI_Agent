@@ -35,15 +35,16 @@ graph TD
 ## 4. Challenges & Findings
 - **LLM Verbosity & Formatting**: The local Qwen2.5-3B model often added conversational filler, making it difficult to pass the TA's strict exact-string-matching evaluation. Despite using strict prompt engineering and few-shot examples, small local models naturally struggle with rigid formatting constraints.
 - **Quantization Impact**: Initially, the LLM was loaded using 4-bit quantization to save VRAM. However, we found that disabling 4-bit quantization and running the model in native fp16 (16-bit) significantly improved the model's instruction-following capabilities (compliance) and slightly increased the final score.
-- **Neo4j Network Routing Issues**: When connecting to the Neo4j Aura cloud instance from certain local networks (e.g., restricted campus networks or Windows environments), the default `neo4j+s://` protocol failed with `Unable to retrieve routing information` or SSL certificate errors. We resolved this by bypassing the DNS SRV lookup and strict SSL verification using the `neo4j+ssc://` scheme.
+- **Neo4j Network Routing Issues & Docker Migration**: When initially connecting to the Neo4j Aura cloud instance from certain local networks, the default `neo4j+s://` protocol failed with `Unable to retrieve routing information` or SSL certificate errors. While we initially resolved this using `neo4j+ssc://`, we have since migrated to a local Docker container using `docker-compose.yml` to ensure a consistent, zero-configuration testing environment for the TA.
 - **Windows Encoding**: Emojis in console output caused `cp950` errors. These were removed to ensure cross-platform compatibility.
 - **Agent Architecture Success**: While the final string-matching score was limited by the local LLM's verbosity, the system achieved a 100% success rate on Failure-Handling and Diagnosis, and a 90% success rate on Security Rejection. This proves the robustness of the multi-agent orchestration.
 
 ## 5. Setup & Execution
 1. Install requirements: `pip install -r requirements.txt`
-2. Configure Environment: Rename `.env.example` to `.env`. (Use your local Neo4j credentials).
-3. Build Knowledge Graph: `python build_kg.py` (This will construct the KG from the source PDFs).
-4. Run Test: `python auto_test_a5.py` (Local LLM Qwen2.5-3B will be loaded automatically).
+2. Start local Neo4j Database: `docker compose up -d` (Ensure Docker Desktop is running).
+3. Configure Environment: Rename `.env.example` to `.env`. (The default configuration uses the local Docker Neo4j instance at `bolt://localhost:7687`).
+4. Build Knowledge Graph: `python build_kg.py` (This will parse the PDFs and populate your local Neo4j database).
+5. Run Test: `python auto_test_a5.py` (Local LLM Qwen2.5-3B will be loaded automatically).
 
 ## 6. Final Evaluation Result
 The system achieved a **perfect 60/60 score** in the automated evaluation.
